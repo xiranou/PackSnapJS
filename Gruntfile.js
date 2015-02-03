@@ -12,6 +12,14 @@ module.exports = function (grunt) {
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+    shell:{
+      mongo:{
+        command: 'mongod',
+        options: {
+          async: true
+        }
+      }
+    },
     develop: {
       server: {
         file: 'app.js'
@@ -75,6 +83,7 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('default', [
+    'shell',
     'less',
     'develop',
     'watch'

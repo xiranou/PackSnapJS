@@ -11,3 +11,5 @@ CSS pre-processor: less
 Database: mongoDB
 
 Build tool: Grunt
+
+Start Server: npm install; grunt

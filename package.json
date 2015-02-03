@@ -22,6 +22,7 @@
     "grunt-develop": "~0.4.0",
     "grunt-contrib-less": "~1.0.0",
     "grunt-contrib-watch": "~0.6.1",
+    "grunt-shell-spawn": "<=0.3.0",
     "request": "~2.51.0",
     "time-grunt": "~1.0.0",
     "load-grunt-tasks": "~2.0.0"

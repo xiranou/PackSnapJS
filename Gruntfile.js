@@ -14,7 +14,7 @@ module.exports = function (grunt) {
     pkg: grunt.file.readJSON('package.json'),
     shell:{
       mongo:{
-        command: 'mongod',
+        command: 'sh startMongoDb.sh',
         options: {
           async: true
         }

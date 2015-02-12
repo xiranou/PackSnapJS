@@ -9,8 +9,7 @@ var compress = require('compression');
 var methodOverride = require('method-override');
 
 module.exports = function(app, config) {
-  app.set('views', config.root + '/app/views');
-  app.set('view engine', 'jade');
+  app.use(express.static(config.root + '/app/views'));
 
   // app.use(favicon(config.root + '/public/img/favicon.ico'));
   app.use(logger('dev'));
@@ -33,7 +32,7 @@ module.exports = function(app, config) {
     err.status = 404;
     next(err);
   });
-  
+
   if(app.get('env') === 'development'){
     app.use(function (err, req, res, next) {
       res.status(err.status || 500);

@@ -8,12 +8,5 @@ module.exports = function (app) {
 };
 
 router.get('/', function (req, res, next) {
-
-  Article.find(function (err, articles) {
-    if (err) return next(err);
-    res.render('index', {
-      title: 'PackSnapJS',
-      articles: articles
-    });
-  });
+  res.render("index");
 });
